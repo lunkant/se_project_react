@@ -2,7 +2,9 @@ import closeButton from "../../assets/close_button2.svg";
 import "./ItemModal.css";
 function ItemModal({ activeModal, handleCloseClick, card }) {
   return (
-    <div className={`modal ${activeModal === "preview" && "modal_is-opened"}`}>
+    <div
+      className={`modal ${activeModal === "preview" ? "modal_is-opened" : ""}`}
+    >
       <div className="modal__container_type_image">
         <button
           type="button"

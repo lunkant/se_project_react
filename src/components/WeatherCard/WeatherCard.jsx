@@ -1,7 +1,7 @@
 import sunnyWeatherCard from "../../assets/sunny_weather_card.svg";
 import "./WeatherCard.css";
 import { weatherOptions } from "../../utils/constants";
-function WheatherCard({ weatherData }) {
+function WeatherCard({ weatherData }) {
   const filteredOptions = weatherOptions.filter((option) => {
     return (
       option.day === weatherData.isDay &&
@@ -21,4 +21,4 @@ function WheatherCard({ weatherData }) {
   );
 }
 
-export default WheatherCard;
+export default WeatherCard;

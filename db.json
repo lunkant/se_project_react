@@ -115,10 +115,16 @@
       "_id": 19
     },
     {
-      "name": "Kimono2",
-      "imageUrl": "https://hianime.to/images/discussion.png",
-      "weather": "warm",
-      "_id": 20
+      "name": "Trench Coat",
+      "imageUrl": "https://m.media-amazon.com/images/I/61KC2G1kgML._AC_SY741_.jpg",
+      "weather": "cold",
+      "_id": 21
+    },
+    {
+      "name": "Hawaiian Shirt",
+      "imageUrl": "https://m.media-amazon.com/images/I/61ulgrm0LlL._AC_SY879_.jpg",
+      "weather": "hot",
+      "_id": 22
     }
   ]
 }

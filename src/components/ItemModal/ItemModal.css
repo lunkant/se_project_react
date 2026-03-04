@@ -5,22 +5,33 @@
   margin: 0;
   padding: 0;
   width: 498px;
-  height: 498;
+  height: 610px;
   background-color: rgba(255, 255, 255, 1);
   position: relative;
+  /* overflow: hidden; */
 }
 .modal__image_type_preview {
+  height: 498px;
+  max-height: 498px;
   border-radius: 16px 16px 0 0;
+  flex: 1 1 auto;
+  min-height: 0;
+  display: block;
   box-sizing: border-box;
   object-fit: contain;
+  object-position: center;
+  box-sizing: border-box;
 }
 .modal__footer {
   display: flex;
   flex-direction: column;
+  flex: 0 0 auto;
   margin: 0;
   padding: 20px 0 32px 32px;
   border: none;
   position: relative;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 0 0 16px 16px;
 }
 .modal__caption {
   margin: 0 0 12px;

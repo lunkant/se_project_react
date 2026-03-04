@@ -55,16 +55,13 @@ function App() {
   };
 
   const onAddItem = (inputValues) => {
-    console.log("submit ", inputValues);
     const newCardData = {
-      // _id: Date.now().toString(),
       name: inputValues.name,
       imageUrl: inputValues.imageUrl,
       weather: inputValues.weatherType,
     };
     addItem(newCardData)
       .then((data) => {
-        console.log(data);
         setClothingItems([data, ...clothingItems]);
         closeActiveModal();
       })
@@ -89,7 +86,6 @@ function App() {
 
     getItems()
       .then((data) => {
-        console.log(data);
         setClothingItems(data.reverse());
       })
       .catch(console.error);

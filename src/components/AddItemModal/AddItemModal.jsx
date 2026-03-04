@@ -1,5 +1,6 @@
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 import { useForm } from "../../hooks/useForm";
+import { useEffect } from "react";
 const AddItemModal = ({ activeModal, onAddItem, handleCloseClick }) => {
   const defaultValues = {
     name: "",
@@ -8,11 +9,15 @@ const AddItemModal = ({ activeModal, onAddItem, handleCloseClick }) => {
   };
   const { values, handleChange, resetForm } = useForm(defaultValues);
 
+  useEffect(() => {
+    if (activeModal === "add-garment") {
+      resetForm();
+    }
+  }, [activeModal]);
+
   function handleSubmit(evt) {
     evt.preventDefault();
     onAddItem(values);
-    evt.target.reset();
-    resetForm();
   }
   return (
     <ModalWithForm
@@ -61,6 +66,7 @@ const AddItemModal = ({ activeModal, onAddItem, handleCloseClick }) => {
             id="hot"
             name="weatherType"
             value="hot"
+            checked={values.weatherType === "hot"}
             required
             onChange={handleChange}
           />{" "}
@@ -73,6 +79,7 @@ const AddItemModal = ({ activeModal, onAddItem, handleCloseClick }) => {
             id="warm"
             name="weatherType"
             value="warm"
+            checked={values.weatherType === "warm"}
             required
             onChange={handleChange}
           />{" "}
@@ -85,6 +92,7 @@ const AddItemModal = ({ activeModal, onAddItem, handleCloseClick }) => {
             id="cold"
             name="weatherType"
             value="cold"
+            checked={values.weatherType === "cold"}
             required
             onChange={handleChange}
           />{" "}

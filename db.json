@@ -109,12 +109,6 @@
       "_id": 17
     },
     {
-      "name": "Kimono",
-      "imageUrl": "https://hianime.to/images/discussion.png",
-      "weather": "warm",
-      "_id": 19
-    },
-    {
       "name": "Trench Coat",
       "imageUrl": "https://m.media-amazon.com/images/I/61KC2G1kgML._AC_SY741_.jpg",
       "weather": "cold",
@@ -125,6 +119,12 @@
       "imageUrl": "https://m.media-amazon.com/images/I/61ulgrm0LlL._AC_SY879_.jpg",
       "weather": "hot",
       "_id": 22
+    },
+    {
+      "name": "Cargo pants",
+      "imageUrl": "https://m.media-amazon.com/images/I/61TkwKv2s5L._AC_SY741_.jpg",
+      "weather": "warm",
+      "_id": 23
     }
   ]
 }

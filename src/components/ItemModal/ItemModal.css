@@ -4,6 +4,8 @@
   border-radius: 16px;
   margin: 0;
   padding: 0;
+  width: 498px;
+  height: 498;
   background-color: rgba(255, 255, 255, 1);
   position: relative;
 }
@@ -13,9 +15,12 @@
   object-fit: contain;
 }
 .modal__footer {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 20px 0 32px 32px;
   border: none;
+  position: relative;
 }
 .modal__caption {
   margin: 0 0 12px;
@@ -47,4 +52,18 @@
   background-color: transparent;
   cursor: pointer;
   padding: 0;
+}
+
+.item-modal__delete-btn {
+  position: absolute;
+  background: none;
+  border: none;
+  color: rgba(255, 77, 0, 1);
+  top: 20px;
+  left: 366.44px;
+  font-size: 20px;
+  white-space: nowrap;
+}
+.item-modal__delete-btn:hover {
+  font-size: 23px;
 }

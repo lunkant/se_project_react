@@ -1,0 +1,55 @@
+.confirm-delete-modal__container {
+  width: 670px;
+  max-width: 670px;
+  height: 280px;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 20px;
+  padding: 60px 40px;
+  position: relative;
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.confirm-delete-modal__close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.confirm-delete-modal__text {
+  margin: 0 0 40px;
+  font-family: "Cabinet Grotesk", sans-serif, Arial;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.confirm-delete-modal__confirm-btn {
+  border: none;
+  background: transparent;
+  color: rgba(255, 77, 0, 1);
+  font-family: "Cabinet Grotesk", sans-serif, Arial;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  cursor: pointer;
+  margin-bottom: 24px;
+}
+
+.confirm-delete-modal__cancel-btn {
+  border: none;
+  background: transparent;
+  color: rgba(0, 0, 0, 1);
+  font-family: "Cabinet Grotesk", sans-serif, Arial;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+
+  cursor: pointer;
+}

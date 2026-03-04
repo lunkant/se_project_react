@@ -12,11 +12,14 @@ export const getWeather = ({ latitude, longitude }, APIkey) => {
 export const filterWeatherData = (data) => {
   const result = {};
   result.city = data.name;
-  result.temp = { F: Math.round(data.main.temp) };
+  result.temp = {
+    F: Math.round(data.main.temp),
+    C: Math.round(((data.main.temp - 32) * 5) / 9),
+  };
 
   result.type = getWeatherType(result.temp.F);
 
-  const raw = data.weather[0].main.toLowerCase();
+  const unmatchConditions = data.weather[0].main.toLowerCase();
 
   const conditionMap = {
     thunderstorm: "storm",
@@ -32,7 +35,7 @@ export const filterWeatherData = (data) => {
     tornado: "storm",
   };
 
-  result.condition = conditionMap[raw] || raw;
+  result.condition = conditionMap[unmatchConditions] || unmatchConditions;
   // result.condition = data.weather[0].main.toLowerCase();
   result.isDay = isDay(data.sys, Date.now());
 

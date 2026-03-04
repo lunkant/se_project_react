@@ -14,6 +14,26 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: border-color 0.7s ease;
+}
+.toggle-switch:hover {
+  border: 2px solid rgba(0, 0, 0, 1);
+  transition: border-color 0.3s ease;
+}
+
+@keyframes changeColor {
+  0% {
+    border: 2px solid rgba(126, 126, 126, 1);
+  }
+  50% {
+    border: 2px solid rgba(0, 0, 0, 1);
+  }
+  100% {
+    border: 2px solid rgba(126, 126, 126, 1);
+  }
+}
+.toggle-switch:has(.toggle-switch__checkbox:checked) {
+  animation: changeColor 0.9s ease;
 }
 .toggle-switch__checkbox {
   position: absolute;
@@ -37,7 +57,7 @@
   border-radius: 50%;
   left: -2px;
   top: -2px;
-  transition: all 0.7s;
+  transition: all 0.7s ease;
 }
 .toggle-switch__text {
   font-family: "Cabinet Grotesk", sans-serif, Arial;

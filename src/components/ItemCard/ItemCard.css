@@ -14,8 +14,6 @@
   border-radius: 16px;
 }
 .card__name {
-  position: absolute;
-  top: 15px;
   margin: 0;
   padding: 2px 12px;
   border-radius: 4px;
@@ -33,5 +31,28 @@
   border-radius: 16px;
   object-fit: cover;
   cursor: pointer;
+  display: block;
+}
+.card__like-btn {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+.card__header {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 0;
+}
+.card__like-icon {
+  width: 20px;
+  height: 20px;
   display: block;
 }

@@ -8,11 +8,14 @@ function ModalWithForm({
   children,
   activeModal,
   onSubmit,
+  isSubmitDisabled,
+  altActionText,
+  onAltClick,
 }) {
   return (
     <div
       className={`modal modal_type_${name} ${
-        activeModal === "add-garment" ? "modal_is-opened" : ""
+        activeModal === name ? "modal_is-opened" : ""
       }`}
     >
       <div className="modal__container">
@@ -26,9 +29,24 @@ function ModalWithForm({
         </button>
         <form onSubmit={onSubmit} className="modal__form">
           {children}
-          <button type="submit" className="modal__submit-btn">
-            {buttonText}
-          </button>
+          <div className="modal__actions">
+            <button
+              type="submit"
+              className="modal__submit-btn"
+              disabled={isSubmitDisabled}
+            >
+              {buttonText}
+            </button>
+            {altActionText && (
+              <button
+                type="button"
+                className="modal__alt-btn"
+                onClick={onAltClick}
+              >
+                {altActionText}
+              </button>
+            )}
+          </div>
         </form>
       </div>
     </div>

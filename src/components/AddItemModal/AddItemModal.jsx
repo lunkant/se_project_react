@@ -13,19 +13,26 @@ const AddItemModal = ({ activeModal, onAddItem, handleCloseClick }) => {
     if (activeModal === "add-garment") {
       resetForm();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeModal]);
 
   function handleSubmit(evt) {
     evt.preventDefault();
     onAddItem(values);
   }
+
+  const isFormValid = Object.values(values).every(
+    (value) => value.trim() !== "",
+  );
+
   return (
     <ModalWithForm
       title="New garment"
-      name="new-card"
+      name="add-garment"
       activeModal={activeModal}
       handleCloseClick={handleCloseClick}
       onSubmit={handleSubmit}
+      isSubmitDisabled={!isFormValid}
     >
       {" "}
       <label htmlFor="name" className="modal__label">

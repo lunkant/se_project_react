@@ -1,4 +1,3 @@
-import sunnyWeatherCard from "../../assets/sunny_weather_card.svg";
 import "./WeatherCard.css";
 import { weatherOptions } from "../../utils/constants";
 import { useContext } from "react";

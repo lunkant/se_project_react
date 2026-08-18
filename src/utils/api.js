@@ -21,8 +21,8 @@ export const addItem = ({ name, imageUrl, weather }, token) => {
   }).then(handleServerResponse);
 };
 
-export const removeItem = (itemID, token) => {
-  return fetch(`${baseUrl}/items/${itemID}`, {
+export const removeItem = (itemId, token) => {
+  return fetch(`${baseUrl}/items/${itemId}`, {
     method: "DELETE",
     headers: { ...headers, authorization: `Bearer ${token}` },
   }).then(handleServerResponse);

@@ -35,12 +35,12 @@ const RegisterModal = ({
       altActionText="or Log in"
       onAltClick={handleLoginClick}
     >
-      <label htmlFor="name" className="modal__label">
+      <label htmlFor="register-name" className="modal__label">
         Name{" "}
         <input
           type="text"
           className="modal__input"
-          id="name"
+          id="register-name"
           name="name"
           placeholder="Name"
           required

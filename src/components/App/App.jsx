@@ -140,7 +140,7 @@ function App() {
     const token = localStorage.getItem("jwt");
     updateUserProfile({ name, avatar }, token)
       .then((updatedUser) => {
-        setCurrentUser(updatedUser);
+        setCurrentUser((prev) => ({ ...prev, ...updatedUser }));
         closeActiveModal();
       })
       .catch(console.error);

@@ -1,6 +1,7 @@
 import { handleServerResponse } from "./api";
 
-const baseUrl = "http://localhost:3001";
+import { baseUrl } from "./constants.js";
+
 const headers = { "Content-Type": "application/json" };
 
 export const signup = ({ name, avatar, email, password }) => {

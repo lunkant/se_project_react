@@ -1,4 +1,4 @@
-export const weatherOptions = [
+const weatherOptions = [
   {
     day: true,
     condition: "clear",
@@ -65,8 +65,15 @@ export const weatherOptions = [
 
 // The utils files contain default clothing items
 
-export const coordinates = {
+const baseUrl =
+  process.env.NODE_ENV === "production"
+    ? "https://api.weather-clothes.ftp.sh"
+    : "http://localhost:3001";
+
+const coordinates = {
   latitude: 40.249199,
   longitude: -75.646759,
 };
-export const apiKey = "3b04b0a81838d780d18c690216e966ca";
+const apiKey = "3b04b0a81838d780d18c690216e966ca";
+
+export { weatherOptions, baseUrl, coordinates, apiKey };
